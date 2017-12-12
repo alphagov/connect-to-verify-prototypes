@@ -18,54 +18,100 @@ router.get('/how-to-connect', (req, res) => {
           'subtasks': [
             {
               'name': 'Learn how Verify works',
+              'href': 'https://gov.uk/verify'
+            },
+            {
+              'name': 'Understand if your users need identity assurance',
               'href': '/how-to-connect/not-implemented'
             },
             {
-              'name': 'Learn about the technologies that support Verify',
+              'name': 'Share an initial proposal about how your service will use Verify',
               'href': '/how-to-connect/not-implemented'
             },
             {
-              'name': 'Understand if your users need to prove their identity',
-              'href': '/how-to-connect/not-implemented'
+              'name': 'Learn about the Verify architecture',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/arch/arch.html'
+            }
+          ]
+        }
+      ],
+        [{
+          'name': 'Needs analysis',
+          'subtasks': [
+            {
+              'name': 'Complete a full risk assessment and confirm your need for GOV.UK Verify',
+              'href': 'http://alphagov.github.io/identity-assurance-documentation/stage2/completeRiskAssessment.html'
             },
             {
-              'name': 'See whether Verify meets your service’s identity needs',
-              'href': '/how-to-connect/not-implemented'
+              'name': 'Confirm the level of assurance your service requires',
+              'href': 'http://alphagov.github.io/identity-assurance-documentation/stage2/confirmLevelAssurance.html#confirmlevelassurance'
             },
             {
-              'name': 'Decide what level of assurance your service needs',
-              'href': '/how-to-connect/not-implemented'
+              'name': 'Share a recent privacy impact assessment',
+              'href': 'http://alphagov.github.io/identity-assurance-documentation/stage2/privacyImpactAssessment.html#privacyimpactassessment'
             },
             {
-              'name': 'Make sure you have the right skills in your team',
-              'href': '/how-to-connect/not-implemented'
+              'name': 'Read the code of interoperability (CoIn) and raise any queries with the Verify team',
+              'href': 'https://www.gov.uk/government/publications/govuk-verify-code-of-interoperability'
+            }
+          ]
+        },
+          {
+          'name': 'Technical needs analysis',
+          'subtasks': [
+            {
+              'name': 'Matching  needs',
+              'href': ''
             }
           ]
         }],
-        [{ 
+        [{
+          'name': 'Planning',
+          'subtasks': [
+            {
+              'name': 'Share your plan for integrating Verify into your service',
+              'href': 'http://alphagov.github.io/identity-assurance-documentation/stage3/integratingPlan.html#integratingplan'
+            },
+            {
+              'name': 'Share the operational support model for your service',
+              'href': 'http://alphagov.github.io/identity-assurance-documentation/stage3/operationalSupportModel.html#operationalsupportmodel'
+            },
+            {
+              'name': 'Your communications plan for integrating GOV.UK Verify into your service',
+              'href': 'http://alphagov.github.io/identity-assurance-documentation/stage3/communicationsPlan.html#communicationsplan'
+            }
+          ]
+        },{
+          'name': 'Technical Planning',
+          'subtasks': [
+            {
+              'name': 'Understand what your service needs to build',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/steps/steps.html#development'
+            },
+            {
+              'name': 'Plan how you will do development',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/steps/steps.html#development'
+            },
+            {
+              'name': 'Define your matching strategy',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/ms/msBuild.html#define-your-matching-strategy'
+            }
+          ]
+        },{
           'name': 'Research and design your service with Verify',
           'subtasks': [
             {
-              'name': 'Figure out where Verify fits in your user journey',
-              'href': '/how-to-connect/not-implemented'
+              'name': 'Decide where verify fits into your service design',
+              'href': '/not-implemented'
             },
             {
-              'name': 'View case studies',
-              'href': '/how-to-connect/not-implemented'
-            },
-            {
-              'name': 'Connect your prototype to the Verify demo',
-              'href': '/connect-to-verify'
-            },
-            {
-              'name': 'Determine how you will use the verified identity data in your service',
-              'href': '/how-to-connect/not-implemented'
-            }
-          ]
-        }]
-      , 
-        [{ 
-          'name': 'Connect Verify to your service',
+              'name': 'Connect your service to the Verify demo',
+              'href': '/not-implemented'
+            }]
+        }
+        ],[
+          { 
+          'name': 'Integrate Verify to your service',
           'subtasks': [
             {
               'name': 'Set up your service to send and receive messages from Verify',
@@ -73,11 +119,28 @@ router.get('/how-to-connect', (req, res) => {
             },
             {
               'name': 'Test that your service can send and receive messages from Verify',
-              'href': '/connect-to-verify'
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/saml/samlComplianceTool.html'
+            }
+          ]
+          }],
+          [{ 
+          'name': 'Connect to a test environment',
+          'subtasks': [
+            {
+              'name': 'Request certificates from the Verify PKI',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/pki/pkiRequestCert.html#pkirequestcert'
             },
             {
-              'name': 'Connect your service to the test environment',
-              'href': '/connect-to-verify'
+              'name': 'Request access to the Verify Integration environment',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/env/envRequestform.html#envrequestform'
+            },
+            {
+              'name': 'Configure the Matching Service Adapter for the Integration environment',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/msa/msaUse.html#configuremsa'
+            },
+            {
+              'name': 'Configure your service for the Integration environment',
+              'href': ''
             }
           ]
         },
@@ -85,41 +148,41 @@ router.get('/how-to-connect', (req, res) => {
           'name': 'Prepare for production',
           'subtasks': [
             {
-              'name': 'Understand the operational support model',
-              'href': '/how-to-connect/not-implemented'
-            },
-            {
-              'name': 'Make sure you have user support for your live service',
-              'href': '/how-to-connect/not-implemented'
-            },
-            {
-              'name': 'Sign the Code of Interoperability',
-              'href': '/how-to-connect/not-implemented'
+              'name': 'Sign the CoIn and share with Verify',
+              'href': 'https://www.gov.uk/government/publications/govuk-verify-code-of-interoperability'
             },
             {
               'name': "Send us a description of your service's volumes and demographics",
               'href': '/how-to-connect/not-implemented'
+            },
+            {
+              'name': "Share your ongoing communcations plan",
+              'href': 'http://alphagov.github.io/identity-assurance-documentation/stage5/ongoingCommunicationsPlan.html#ongoingcommunicationsplan'
             }
           ]
         }],
         [{ 
-          'name': "Once you're connected",
+          'name': 'Connect Verify to your production service',
           'subtasks': [
             {
-              'name': 'Manage your connections to Verify',
-              'href': '/connect-to-verify'
+              'name': 'Request certificates from the Verify PKI for production',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/pki/pkiRequestCert.html#pkirequestcert'
             },
             {
-              'name': 'Manage your certificates',
-              'href': '/connect-to-verify'
+              'name': 'Request access to the production Verify environment',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/env/envRequestform.html#envrequestform'
             },
             {
-              'name': 'Contact Verify for support',
-              'href': '/how-to-connect/not-implemented'
+              'name': 'Configure the Matching Service Adapter for the Integration environment',
+              'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/msa/msaUse.html#configuremsa'
+            },
+            {
+              'name': 'Configure your service for the production environment',
+              'href': ''
             }
           ]
         }]
-      ]
+    ]
   })
 })
 
