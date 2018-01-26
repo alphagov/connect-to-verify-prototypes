@@ -16,30 +16,39 @@
 
 <main id="content" role="main">
 
-
   <div class="grid-row">
     <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        Manage your services
+        Manage your connections
       </h1>
-
-
-      <ul class="list heading-medium">
-      {% if  data['service-name'] %}
-      <li>
-        <a href="/connect-to-verify/service-summary">{{ data['service-name'] }}</a>
-      </li>
-      {% else %}
-      <p>You don't have any services yet.</p>
-      {% endif %}
       <br>
-      <a href="/connect-to-verify/create-service" role="button">Add a service...</a>
-      </ul>
+      <p>Connections to the demo enviroment:</p>
+        <a class="task-name" href="/connect-to-verify/not-implemented" role="button">Add a connection...</a>
+      <br><br>
+        <p>Connections to the intergration enviroment:</p>
+        <a class="task-name" href="/connect-to-verify/connect-to-integration" aria-describedby="read-declaration-completed">
+          Connection to test environment
+        </a>
+        <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="read-declaration-completed">
+          Add a connection
+        </a>
+      </div>
 
+      <div class="column-third">
+      <aside class="govuk-related-items" role="complementary">
+          <h2 class="heading-medium" id="subsection-title">Help and settings</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="font-xsmall">
+              <li><a href="/connect-to-verify/logged-in-home">Switch service</a></li>
+              <li><a href="/connect-to-verify/not-implemented">Account settings</a></li>
+              <li><a href="/connect-to-verify/not-implemented">Contact Verify</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
     </div>
   </div>
-
 </main>
 
 {% endblock %}

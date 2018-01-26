@@ -11,7 +11,7 @@
     <div class="column-two-thirds column-minimum">
 
       <h1 class="heading-large">
-        Connect {{ data['service-name'] }} to a test environment
+        Manage your connection
       </h1>
       <br>
       <div>
@@ -22,26 +22,7 @@
       <ol class="task-list">
         <li>
           <h2 class="task-list-section">
-            <span class="task-list-section-number">1. </span> Send and receive messages from Verify
-          </h2>
-          <ul class="task-list-items">
-            <li class="task-list-item">
-              <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="eligibility-completed">
-                Set up your service to send and receive messages from Verify
-              </a>
-              <strong class="task-completed" id="eligibility-completed">Completed</strong>
-            </li>
-            <li class="task-list-item">
-              <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="read-declaration-completed">
-                Check your service can send and receive messages from Verify
-              </a>
-              <strong class="task-completed" id="read-declaration-completed">Completed</strong>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <h2 class="task-list-section">
-            <span class="task-list-section-number">2. </span> Configure your connection to the test environment
+            <span class="task-list-section-number">1. </span> Configure your connection to the test environment
           </h2>
           <ul class="task-list-items">
             <li class="task-list-item">
@@ -49,7 +30,7 @@
                 Submit your service URLs and IDs
               </a>
               {% if data['urls-complete'] %}
-              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              <strong class="task-completed" id="eligibility-edited">Edited</strong>
               {% endif %}
             </li>
             <li class="task-list-item">
@@ -57,15 +38,28 @@
                 Submit security certificates
               </a>
               {% if data['certificates-complete'] %}
-              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              <strong class="task-completed" id="eligibility-edited">Edited</strong>
               {% endif %}
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="/connect-to-verify/end-user-content">
+                Edit content shown to your end users
+              </a>
+              {% if data['end-user-content-complete'] %}
+              <strong class="task-completed" id="eligibility-edited">Edited</strong>
+              {% endif %}
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="/connect-to-verify/not-implemented">
+                (optional) Matching configuration
+              </a>
+              <!-- {% if data['not-implemented'] %}
+              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% endif %} -->
             </li>
           </ul>
         </li>
       </ol>
-      <div>
-            You can also <a href="/connect-to-verify/end-user-content">edit the content</a> shown to your end users. This is not required to connect to the test environment.
-      </div>
       <br>
       <div>
         <input type="hidden" value="true" name="integration-submit">
