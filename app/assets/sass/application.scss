@@ -30,6 +30,8 @@ $path: "/public/images/";
 @import 'service-switcher';
 @import 'admin-list';
 @import 'hacks';
+@import 'modules/_sub-navigation';
+@import 'modules/_breadcrumbs';
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -86,3 +88,9 @@ $path: "/public/images/";
 }
 
 span.heading-small { display: block; }
+
+.lead-in { margin-bottom: 0; }
+
+.lead-in-bold { font-weight: bold; }
+
+#content.supplementary { margin-top: 0; }

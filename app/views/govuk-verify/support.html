@@ -1,97 +1,94 @@
-{% extends "layout.html" %}
+{% extends "supplementary.html" %}
 
 {% set section = "support" %}
 
+{% set pageTitle = "Support - GOV.UK Verify" %}
+
 {% block content %}
 
-
-<main id="content" class="content" role="main">
-
-<div class="breadcrumbs">
-  <ol>
-    <li>
-        <a href="../govuk-service-manual/index#govuk-products">Components</a>
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
     </li>
-    <li>
-        <a href="/verify">Verify</a>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">GOV.UK Verify</span></a>
     </li>
-    <li class="active">
-        Support
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Support</span></a>
     </li>
   </ol>
-</div>
+</nav>
 
+<main id="content" class="content supplementary" role="main">
 
-<div class="grid-row">
-  <div class="column-two-thirds">
-        
-        <h1 class="heading-large">Get support<!--  or give feedback --></h1>
-        <p class="">Do you have a problem or question? Please send a detailed description to our support team.</p>
+<div class="container">
+  <div class="grid-row">
 
+    <div class="column-one-whole">
+      <h1 class="heading-large">Support for service teams</h1>
+      <p>GOV.UK Verify is built and supported 24/7 by a full-time team at the Government Digital Service.</p>
 
-        <form method="post">
-        
-        <div class="form-group">
-        
-          <label class="form-label" for="feedback">
-              <label for="subject">Subject</label>
-          </label>
+<h2 class="heading-medium">Support updates</h2>
+<p>If you have a problem, check for known issues on the <a href="https://verifystatus.digital.cabinet-office.gov.uk">GOV.UK Verify status page</a> first. You can subscribe to get updates whenever GOV.UK Verify creates or updates an incident.</p>
 
-          <input class="form-control form-control-1-1" data-module="" id="subject" name="subject" rows="8" type="text" value="">
-          
-        </div>
+<h2 class="heading-medium">Support in office hours</h2>
+<p>Our office hours are from 8:00am to 18:00pm (GMT), Monday to Friday. Use the <a href="#">GOV.UK Verify service team support form</a> to get help and give feedback. The support team aims to respond to questions by the next working day.</p>
 
-        <div class="form-group" >
-        
-          <label class="form-label" for="feedback">
-              <label for="feedback">Description</label>
-          </label>
+<h2 class="heading-medium">Out-of-hours support</h2>
+<p>We offer 24-hour online support for critical incidents affecting live production services. We have different response times depending on whether the problem you want to report is an emergency.</p>
 
-          <textarea class="form-control form-control-1-1" data-module="" id="feedback" name="feedback" rows="10"></textarea>
-          
-        </div>
-            
-        <div class="form-group" >
-          <label class="form-label" for="name">
-              <label for="name">Name</label>
-          </label>
-          <input class="form-control form-control-1-1 " data-module="" id="name" name="name" rows="8" type="text" value="">
-        </div>
-            
-        <div class="form-group" >
-          <label class="form-label" for="email_address">
-              <label for="email_address">Email address</label>
-          </label>
+<p class="lead-in">It’s only an emergency if:</p>
+<ul class="list list-bullet">
+<li>a significant number of users can’t verify themselves to access your service</li>
+<li>you have reasons to believe there’s been a security breach</li>
+<li>your ‘matching service adapter’ has stopped working</li>
+</ul>
 
-          <input class="form-control form-control-1-1 " data-module="" id="email_address" name="email_address" rows="8" type="text" value="">
-        </div>
-            
-        <div class="page-footer">
-          
-            <input type="hidden" name="csrf_token" value="1479295614##976d209dd1976c382d31065813e2473f178a86df" />
-            <input type="submit" class="button" value="Send" />
+<p>We’ll reply within 20 minutes and give you hourly updates until the problem’s fixed. We’ll reply by the next working day for any other problems.</p>
 
-        </div>
-  
-        </form>
+<h2 class="heading-medium">Support from certified companies</h2>
+
+<p class="lead-in">All certified companies provide user support:</p>
+<ul class="list list-bullet">
+<li>Monday to Friday from 8:00am to 10:00pm (GMT)</li>
+<li>Saturday and Sunday from 8:00am to 5:00pm (GMT)</li>
+</ul>
+
+<p class="lead-in lead-in-bold">Barclays</p>
+<p>Telephone: 0333 202 7479 (English) or 0333 202 7450 (Welsh)</p>
+
+<p class="lead-in lead-in-bold">CitizenSafe</p>
+<p>Email: <a href="support@citizensafe.co.uk">support@citizensafe.co.uk</a></p>
+<p>Telephone: 0333 566 8000</p>
+
+<p class="lead-in lead-in-bold">Digidentity</p>
+<p>Email: <a href="helpdesk@digidentity.co.uk">helpdesk@digidentity.co.uk</a></p>
+<p>Telephone: 0330 60 60 732</p>
+
+<p class="lead-in lead-in-bold">Experian</p>
+<p>Email: <a href="identityservicehelp@experian.com">identityservicehelp@experian.com</a></p>
+<p>Telephone: 0344 481 8192</p>
+
+<p class="lead-in lead-in-bold">The Post Office</p>
+<p>Email: <a href="myprofilehelpdesk@postoffice.co.uk">myprofilehelpdesk@postoffice.co.uk</a></p>
+<p>Telephone: 0330 60 60 733</p>
+
+<p class="lead-in lead-in-bold">Royal Mail</p>
+<p>Email: <a href="identityverification@your.royalmail.com">identityverification@your.royalmail.com</a></p>
+<p>Telephone: 0345 266 0116</p>
+
+<p class="lead-in lead-in-bold">SecureIdentity</p>
+<p>Email: <a href="help@secureidentity.co.uk">help@secureidentity.co.uk</a></p>
+<p>Telephone: 0330 100 0103</p>
+
+<h2 class="heading-medium">GOV.UK Verify user support</h2>
+<p>If you’re a user, not a service team, use the <a href="https://www.signin.service.gov.uk/feedback?">GOV.UK Verify user support form</a> to get help and give feedback on GOV.UK Verify. The user support team aims to respond to questions in 5 working days.</p>
+
 
 
     </div>
-
-    <div class="column-one-third">
-        <div class="govuk-related-items">
-          <h2 class="heading-medium">
-            Other ways to get in touch with the Verify team</h2>
-          
-            <ul class="font-xsmall">
-                <li><a href="#">Link if you want it</a></li>
-            </ul>
-        
-        </div> <!-- End Items -->
-    </div> <!-- End One Third -->
-</div>          
-
-
+  </div>
 </main>
 
 {% endblock %}

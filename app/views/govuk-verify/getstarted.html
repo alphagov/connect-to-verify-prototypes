@@ -1,30 +1,123 @@
-{% extends "layout.html" %}
+{% extends "supplementary.html" %}
 
 {% set section = "getstarted" %}
 
+{% set pageTitle = "Get started - GOV.UK Verify" %}
+
 {% block content %}
 
-<main id="content" class="content" role="main">
-
-<div class="breadcrumbs">
-  <ol>
-    <li>
-        <a href="../govuk-service-manual/index#govuk-products">Components</a>
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
     </li>
-    <li>
-        <a href="/verify">Verify</a>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">GOV.UK Verify</span></a>
     </li>
-    <li class="active">
-        Get Started
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Get started</span></a>
     </li>
   </ol>
-</div>
+</nav>
 
-<h1 class="heading-large">Get started</h1>
-  
-  <p>This is some content"</p>  
- 
+<main id="content" class="content supplementary" role="main">
 
+<div class="container">
+  <div class="grid-row">
+    <div class="column-one-third">
+      <nav class="sub-navigation">
+        <ol itemscope itemtype="http://schema.org/ItemList">
+          <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="supplementary/page-one.html" itemprop="item"><span itemprop="name">Get started</span></a>
+          </li>
+          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="supplementary/page-two.html" itemprop="item"><span itemprop="name">Another page two</span></a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-large">Get started</h1>
+      <h2 class="heading-medium">1. Check GOV.UK Verify is right for your service</h2>
+      <p class="lead-in lead-in-bold">GOV.UK Verify could be right for you if your service needs to:</p>
+      <ul class="list list-bullet">
+        <li>pay money to a user</li>
+        <li>have legal confirmation that a user is who they say they are, for example if they’re signing a mortgage deed</li>
+        <li>show a user’s personal information back to them, like their driving licence or passport details</li>
+      </ul>
+      <p>You don’t need GOV.UK Verify if you only need to recognise a returning user. You can use services like GOV.UK Notify to help with authentication instead.</p>
+      <p class="lead-in lead-in-bold">To help you decide if GOV.UK Verify is right for your service, you should think about:</p>
+      <ul class="list list-bullet">
+        <li>what your service lets users do</li>
+        <li>whether you need to know the identity of your users, or whether knowing they are the same person every time will be enough</li>
+        <li>whether you need to be able to take users to court if they’ve been fraudulent</li>
+        <li>whether any other controls are in place to prevent fraud</li>
+      </ul>
+      <p class="lead-in lead-in-bold">Organisations that can use GOV.UK Verify include:</p>
+      <ul class="list list-bullet">
+        <li>central government</li>
+        <li>local government</li>
+        <li>NHS</li>
+        <li>police</li>
+      </ul>
+      <h2 class="heading-medium">2. Understand how GOV.UK Verify works</h2>
+      <p class="lead-in">GOV.UK Verify provides a ‘hub’ between government services and private sector suppliers who have all been assured to government standards. These suppliers (or ‘certified companies’) are:</p>
+      <ul class="list list-bullet">
+        <li><a href="http://www.barclays.co.uk/identity">Barclays</a></li>
+        <li><a href="https://www.citizensafe.co.uk/">CitizenSafe</a></li>
+        <li><a href="https://www.digidentity.eu/en/">Digidentity</a></li>
+        <li><a href="http://www.experian.co.uk/identity-and-fraud/govuk-verify/">Experian</a></li>
+        <li><a href="http://www.postoffice.co.uk/government-verify">Post Office</a></li>
+        <li><a href="http://www.royalmail.com/personal/identity-verification">Royal Mail</a></li>
+        <li><a href="https://secureidentity.co.uk/">SecureIdentity</a></li>
+      </ul>
+      <p class="lead-in lead-in-bold">When a user tries to access your service:</p>
+      <ol class="list list-number">
+        <li>Your service sends them to the GOV.UK Verify hub.</li>
+        <li>The hub sends them to a certified company.</li>
+        <li>The certified company sends them back to the hub.</li>
+        <li>The hub sends them back to your service.</li>
+      </ol>
+
+      <p class="lead-in lead-in-bold">What your users see</p>
+      <ol class="list list-number">
+        <li>Users will be asked if they already have an account with one of the certified companies.</li>
+        <li>Users who already have an account just need to sign in.</li>
+        <li>Users who don’t have an account can sign up online by answering questions only they know the answers to or by scanning their identity documents, for example a passport.</li>
+        <li>Users will be sent straight back to your service.</li>
+      </ol>
+      <p><a href="">Try the user journey</a>
+
+      <p class="lead-in lead-in-bold">What your service receives</p>
+      <ol class="list list-number">
+        <li>The certified company will send you the user’s name, address and date of birth.</li>
+        <li>You can match the user’s name, address and data of birth against records you already have, or create a new record to recognise your user in the future.</li>
+      </ol>
+
+      <p class="lead-in lead-in-bold">Which ‘level of assurance’</p>
+      <p>Verify can provide 2 levels of confidence about who a user is depending on what your service needs.</p>
+      <p>‘Level of assurance 2’ (LOA2) gives services strong enough confidence in the user’s identity to take them to court. For example, applying for a redundancy payment needs LOA2 because public funds are at risk and it’s a service that’s highly likely to be targeted by fraudsters.</p>
+      <p>Level of assurance 1 (LOA1) is for services that need less proof of identity than LOA2, but more than just authentication. For example, applying for a parking permit might need LOA1 because there’s a low financial risk and there are other controls in place to prevent fraud, like users being able to post the permit to a known address.</p>
+
+      <h2 class="heading-medium">3. Share information with your team</h2>
+      <p>Choosing to connect to Verify usually involves people with specialist knowledge, including technical, risk and privacy experts.</p>
+      <p>Share the GOV.UK Verify documentation with your team to help them understand what connecting to Verify involves.</p>
+
+      <h2 class="heading-medium">4. Connect your service to GOV.UK Verify</h2>
+      <p class="lead-in">To connect to Verify you’ll need to complete 6 steps:</p>
+      <ol class="list list-number">
+        <li><a href="http://alphagov.github.io/identity-assurance-documentation/stage1/Stage1.html#proposal">Proposal</a></li>
+        <li><a href="http://alphagov.github.io/identity-assurance-documentation/stage2/Stage2.html#needs-analysis">Needs analysis</a></li>
+        <li><a href="http://alphagov.github.io/identity-assurance-documentation/stage3/Stage3.html#planning">Planning</a></li>
+        <li><a href="http://alphagov.github.io/identity-assurance-documentation/stage4/Stage4.html#build-and-integration">Build and integration testing</a></li>
+        <li><a href="http://alphagov.github.io/identity-assurance-documentation/stage5/Stage5.html#production-onboarding">Connecting to production</a></li>
+        <li><a href="http://alphagov.github.io/identity-assurance-documentation/stage6/Stage6.html#in-beta">In beta</a></li>
+      </ol>
+
+      <p>You can read about each step in the <a href="http://alphagov.github.io/identity-assurance-documentation/">GOV.UK Verify documentation</a></p>.
+    </div>
+  </div>
 </main>
 
 {% endblock %}

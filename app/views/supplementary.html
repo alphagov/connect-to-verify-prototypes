@@ -1,0 +1,21 @@
+{% extends "product.html" %}
+
+{% set homepage_url = "http://localhost:3000" %}
+
+{% set phase = "beta" %}
+
+{# Product nav URLs and link text #}
+{% set navItems = [
+  ['/verify', 'About'],
+  ['/verify/getstarted', 'Get started'],
+  ['http://alphagov.github.io/identity-assurance-documentation/', 'Documentation'],
+  ['/verify/support', 'Support']
+] %}
+
+{% block page_title %}
+  {{ pageTitle }}
+{% endblock %}
+
+{% block header_class %}
+  with-proposition
+{% endblock %}
