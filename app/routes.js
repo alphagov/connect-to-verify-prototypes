@@ -10,6 +10,18 @@ router.get('/verify', (req, res) => {
   res.render('govuk-verify/index')
 })
 
+router.get('/verify/getstarted', (req, res) => {
+  res.render('govuk-verify/getstarted')
+})
+
+router.get('/verify/documentation', (req, res) => {
+  res.render('govuk-verify/documentation')
+})
+
+router.get('/verify/support', (req, res) => {
+  res.render('govuk-verify/support')
+})
+
 router.get('/how-to-connect', (req, res) => {
   res.render('task-list/index', {
     'steps': [

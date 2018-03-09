@@ -96,6 +96,7 @@
 
       @include media(desktop) {
         display: inline;
+        width: auto;
       }
 
       a {
