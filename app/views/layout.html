@@ -38,6 +38,49 @@
   with-proposition
 {% endblock %}
 
+{% block footer_top %}
+        <div class="footer-categories">
+          <div class="footer-categories-wrapper">
+            <div class="grid-row">
+              <div class="column-one-third">
+                <h2>About</h2>
+                <ul>
+                  <li>
+                    <a href="/verify">
+                      GOV.UK Verify
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/verify/getstarted">
+                      Get started
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="column-one-third">
+                <h2>Support</h2>
+                <ul>
+                  <li>
+                    <a href="/verify/support">
+                      Contact
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="http://alphagov.github.io/identity-assurance-documentation/">Documentation</a>
+                  </li>
+                  <li>
+                    <a href="https://verifystatus.digital.cabinet-office.gov.uk">
+                      System status
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+{% endblock %}
+
 {% block footer_support_links %}
   {% if useAutoStoreData %}
     <ul>
