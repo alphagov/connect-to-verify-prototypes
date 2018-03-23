@@ -40,12 +40,8 @@ var steps = [
 			'name': 'Create a technical connection plan',
 			'subtasks': [
 				{
-					'name': 'Set up your service to send and receive messages from Verify',
+					'name': 'Answer questions on your technology stack to create a custom task list',
 					'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/index.html'
-				},
-				{
-					'name': 'Test that your service can send and receive messages from Verify',
-					'href': 'https://alphagov.github.io/rp-onboarding-tech-docs/pages/saml/samlComplianceTool.html'
 				}
 			]
 			}],
@@ -102,6 +98,12 @@ router.get('/how-to-connect', (req, res) => {
 
 router.get('/risk-smart-questions/example-result', (req, res) => {
   res.render('risk-smart-questions/example-result', {
+    'steps': steps
+  })
+})
+
+router.get('/risk-smart-questions/example-result-noverify', (req, res) => {
+  res.render('risk-smart-questions/example-result-noverify', {
     'steps': steps
   })
 })
