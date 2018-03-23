@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Example - Branching
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+	<div class="breadcrumbs">
+	  <ol>
+	    <li><a href="/">GOV.UK Verify</a></li>
+	    <li><a href="#">Check if you need proof of your users identity</a></li>
+	  </ol>
+	</div>
+	
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/docs/examples/over-18" method="get" class="form">
+
+        <h1 class="heading-xlarge">
+          Check if you need proof of your users identity
+        </h1>
+
+        <h2 class="heading-medium">
+          What does your service do?
+        </h2>
+
+        <div class="form-group">
+          <fieldset class="inline">
+
+            <div class="multiple-choice">
+              <input id="over18True" type="radio" name="over18" value="true">
+              <label for="over18True">Pays money out</label>
+            </div>
+
+            <div class="multiple-choice">
+              <input id="over18False" type="radio" name="over18" value="false">
+              <label for="over18False">Allows users to view or change personal information</label>
+            </div>
+						
+						<div class="multiple-choice">
+              <input id="over18False" type="radio" name="over18" value="false">
+              <label for="over18False">Gives users a licence</label>
+            </div>
+						
+						<div class="multiple-choice">
+              <input id="over18False" type="radio" name="over18" value="false">
+              <label for="over18False">Checks information about a person for eligibility or security</label>
+            </div>
+						
+						<div class="multiple-choice">
+              <input id="over18False" type="radio" name="over18" value="false">
+              <label for="over18False">None of the above</label>
+            </div>
+
+          </fieldset>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" class="button" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+{% endblock %}

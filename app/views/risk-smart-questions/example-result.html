@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% import "includes/macros.html" as macro %}
+
+{% block page_title %}
+  Check if you need proof of users identity
+{% endblock %}
+<!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/frontend/application-e1f4c53e4d5a26e513b59f8736d1e6f95629b361b8d9c77bbc899fd05aa468c0.css" crossorigin="anonymous" integrity="sha256-J3X5nq7GT/gSG/v7PrZ7DCtLfD/HjSXaMOEtsqCdMNY=">
+
+{% block content %}
+<main id="content" role="main">
+
+	<div class="breadcrumbs">
+	  <ol>
+	    <li><a href="/">Connect to GOV.UK Verify</a></li>
+	    <li><a href="#">Check if you need proof of your users identity</a></li>
+	  </ol>
+	</div>
+	
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+
+        <h1 class="heading-xlarge">
+          Your service has a high risk of identity fraud
+        </h1>
+				
+				<p>
+					Because your service pays out money, criminals may attempt to use fake identities to fradulently use your service.
+				</p>
+				<p>
+					To mitigate your fraud risk, your service should require that users prove their identity at Level of Assurance 2 (LoA2) before you pay money to them.
+				</p>
+				<p>
+					As a central government service, the easiest way to get proof of identity at LoA2 is by connecting to GOV.UK Verify.
+				</p>
+				<p>
+					The next step is to design and research your service with Verify.
+				</p>
+				
+				<a href="#" class="button button-start">Continue to Step 2</a>
+
+    </div>
+		<div class="column-one-third">
+			{{ macro.taskList(steps) }}
+			
+		</div>
+  </div>
+</main>
+{% endblock %}
