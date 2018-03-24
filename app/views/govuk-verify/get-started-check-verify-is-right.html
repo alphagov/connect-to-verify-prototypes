@@ -1,0 +1,75 @@
+{% extends "supplementary.html" %}
+
+{% set section = "getstarted" %}
+
+{% set pageTitle = "Get started - GOV.UK Verify" %}
+
+{% block content %}
+
+<nav class="breadcrumbs" aria-label="Breadcrumbs">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="https://www.gov.uk/service-toolkit#components" itemprop="item"><span itemprop="name">Components</span></a>
+    </li>
+    <li class="breadcrumbs__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="/" itemprop="item"><span itemprop="name">GOV.UK Verify</span></a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      <a href="#main" itemprop="item"><span itemprop="name">Get started</span></a>
+    </li>
+  </ol>
+</nav>
+
+<main id="content" class="content supplementary" role="main">
+
+<div class="container">
+  <div class="grid-row">
+    <div class="column-one-third">
+      <nav class="sub-navigation">
+        <ol itemscope itemtype="http://schema.org/ItemList">
+          <li class="sub-navigation__item sub-navigation__item--active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="get-started-check-verify-is-right.html" itemprop="item"><span itemprop="name">Check GOV.UK Verify is right for your service</span></a>
+          </li>
+          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="get-started-understand-how-verify-works.html" itemprop="item"><span itemprop="name">Understand how GOV.UK Verify works</span></a>
+          </li>
+          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="get-started-share-information.html" itemprop="item"><span itemprop="name">Share information with your team</span></a>
+          </li>
+          <li class="sub-navigation__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a href="get-started-connect-your-service.html" itemprop="item"><span itemprop="name">Connect your service to GOV.UK Verify</span></a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">Get started</h1>
+      
+      <h2 class="heading-large">Check GOV.UK Verify is right for your service</h2>
+      <h2 class="heading-medium">GOV.UK Verify could be right for your service if it needs to:</h2>
+      <ul class="list list-bullet">
+        <li>have legal confirmation that a user is who they say they are, for example if they’re signing a mortgage deed</li>
+        <li>show a user’s personal information back to them, like their driving licence or passport details</li>
+         <li>pay money to a user</li>
+      </ul>
+      <p>You don’t need GOV.UK Verify if you only need to recognise a returning user. You can use services like <a href="https://www.notifications.service.gov.uk">GOV.UK Notify</a> to help with authentication instead.</p>
+      <h2 class="heading-medium">To help you decide if GOV.UK Verify is right for your service, you should think about:</h2>
+      <ul class="list list-bullet">
+        <li>what your service lets users do</li>
+        <li>whether you need to know the identity of your users, or whether knowing they are the same person every time will be enough</li>
+        <li>whether you need to be able to take users to court if they’ve been fraudulent</li>
+        <li>whether any other controls are in place to prevent fraud</li>
+      </ul>
+      <h2 class="heading-medium">Organisations that can use GOV.UK Verify include:</h2>
+      <ul class="list list-bullet">
+        <li>central government</li>
+        <li>local government</li>
+        <li>NHS</li>
+        <li>police</li>
+      </ul>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

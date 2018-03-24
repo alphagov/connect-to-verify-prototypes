@@ -10,8 +10,20 @@ router.get('/verify', (req, res) => {
   res.render('govuk-verify/index')
 })
 
-router.get('/verify/getstarted', (req, res) => {
-  res.render('govuk-verify/getstarted')
+router.get('/verify/get-started-check-verify-is-right', (req, res) => {
+  res.render('govuk-verify/get-started-check-verify-is-right')
+})
+
+router.get('/verify/get-started-understand-how-verify-works', (req, res) => {
+  res.render('govuk-verify/get-started-understand-how-verify-works')
+})
+
+router.get('/verify/get-started-share-information', (req, res) => {
+  res.render('govuk-verify/get-started-share-information')
+})
+
+router.get('/verify/get-started-connect-your-service', (req, res) => {
+  res.render('govuk-verify/get-started-connect-your-service')
 })
 
 router.get('/verify/documentation', (req, res) => {
