@@ -108,6 +108,12 @@ router.get('/risk-smart-questions/example-result-noverify', (req, res) => {
   })
 })
 
+router.get('/tech-smart-questions/example', (req, res) => {
+  res.render('tech-smart-questions/example', {
+    'steps': steps
+  })
+})
+
 router.get('/connect-to-verify-2/settings/service-certificates/obsolete', (req, res) => {
   res.render('connect-to-verify-2/settings/service-certificates', {revoked: true})
 })
