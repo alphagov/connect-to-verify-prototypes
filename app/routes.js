@@ -68,7 +68,7 @@ var steps = [
 		}
 	],
 		[{
-			'name': 'Connect Verify to your production service',
+			'name': 'Connect to the production environment',
 			'subtasks': [
 				{
 					'name': 'Request certificates from the Verify Public Key Infrastructure (PKI) for production',
@@ -95,7 +95,11 @@ router.get('/how-to-connect', (req, res) => {
     'steps': steps
   })
 })
-
+router.get('/risk-smart-questions/example', (req, res) => {
+  res.render('risk-smart-questions/example', {
+    'steps': steps
+  })
+})
 router.get('/risk-smart-questions/example-result', (req, res) => {
   res.render('risk-smart-questions/example-result', {
     'steps': steps

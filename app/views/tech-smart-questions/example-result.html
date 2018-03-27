@@ -1,50 +1,94 @@
-{% extends "layout.html" %}
-
-{% import "includes/macros.html" as macro %}
+{% extends "connect-to-verify/layout.html" %}
 
 {% block page_title %}
-  Check if you need proof of users identity
+  Connect to Verify - Connect to a test environment
 {% endblock %}
-<!--[if gt IE 8]><!--><link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/frontend/application-e1f4c53e4d5a26e513b59f8736d1e6f95629b361b8d9c77bbc899fd05aa468c0.css" crossorigin="anonymous" integrity="sha256-J3X5nq7GT/gSG/v7PrZ7DCtLfD/HjSXaMOEtsqCdMNY=">
 
 {% block content %}
+
 <main id="content" role="main">
-
-	<div class="breadcrumbs">
-	  <ol>
-	    <li><a href="/">Connect to GOV.UK Verify</a></li>
-	    <li><a href="#">Check if you need proof of your users identity</a></li>
-	  </ol>
-	</div>
-	
   <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="column-two-thirds column-minimum">
 
+      <h1 class="heading-large">
+        Custom tasklist for your service {{ data['service-name'] }}
+      </h1>
+      <br>
+      <p>
+        To connect to the Verify test environment, you must complete the steps below.
+      </p>
+			<p>
+				You can take this tasklist to your Alpha assessment to show you have considered what's involved in connecting.
+			</p>
 
-        <h1 class="heading-xlarge">
-          Your service has a high risk of identity fraud
-        </h1>
-				
-				<p>
-					Because your service pays out money, criminals may attempt to use fake identities to fradulently use your service.
-				</p>
-				<p>
-					To mitigate your fraud risk, your service should require that users prove their identity at Level of Assurance 2 (LoA2) before you pay money to them.
-				</p>
-				<p>
-					As a central government service, the easiest way to get proof of identity at LoA2 is by connecting to GOV.UK Verify.
-				</p>
-				<p>
-					The next step is to design and research your service with Verify.
-				</p>
-				
-				<a href="#" class="button button-start">Continue to Step 2</a>
-
+      <ol class="task-list">
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">1. </span> Send and receive messages from Verify
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="eligibility-completed">
+                Set up your service to send and receive messages from Verify
+              </a>
+              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="/connect-to-verify/not-implemented" aria-describedby="read-declaration-completed">
+                Check your service can send and receive messages from Verify
+              </a>
+              <strong class="task-completed" id="read-declaration-completed">Completed</strong>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="task-list-section">
+            <span class="task-list-section-number">2. </span> Configure your connection to the test environment
+          </h2>
+          <ul class="task-list-items">
+            <li class="task-list-item">
+              <a class="task-name" href="/connect-to-verify/urls-and-ids">
+                Submit your service URLs and IDs
+              </a>
+              {% if data['urls-complete'] %}
+              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% endif %}
+            </li>
+            <li class="task-list-item">
+              <a class="task-name" href="/connect-to-verify/certificates">
+                Submit security certificates
+              </a>
+              {% if data['certificates-complete'] %}
+              <strong class="task-completed" id="eligibility-completed">Completed</strong>
+              {% endif %}
+            </li>
+          </ul>
+        </li>
+      </ol>
+      <div>
+            You can also <a href="/connect-to-verify/end-user-content">edit the content</a> shown to your end users. This is not required to connect to the test environment.
+      </div>
+      <br>
+      <div>
+        <input type="hidden" value="true" name="integration-submit">
+        {% if data['urls-complete'] and data['certificates-complete'] %}
+        <a class="button" href="/connect-to-verify/confirmation">Connect</a>
+        {% endif %}
+      </div>
     </div>
-		<div class="column-one-third">
-			{{ macro.taskList(steps) }}
-			
-		</div>
+   <div class="column-third">
+      <aside class="govuk-related-items" role="complementary">
+          <h2 class="heading-medium" id="subsection-title">Help and settings</h2>
+          <nav role="navigation" aria-labelledby="subsection-title">
+            <ul class="font-xsmall">
+              <li><a href="/connect-to-verify/logged-in-home">Switch service</a></li>
+              <li><a href="/connect-to-verify/not-implemented">Account settings</a></li>
+              <li><a href="/connect-to-verify/not-implemented">Contact Verify</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
   </div>
 </main>
+
 {% endblock %}
