@@ -28,7 +28,7 @@ var steps = [
 			'subtasks': [
 				{
 					'name': 'Decide where verify fits into your service\'s user journey',
-					'href': '/not-implemented'
+					'href': '/design-your-service'
 				},
 				{
 					'name': 'Try out your service with a Verify demo',
@@ -108,6 +108,12 @@ router.get('/risk-smart-questions/example-result', (req, res) => {
 
 router.get('/risk-smart-questions/example-result-noverify', (req, res) => {
   res.render('risk-smart-questions/example-result-noverify', {
+    'steps': steps
+  })
+})
+
+router.get('/design-your-service', (req, res) => {
+  res.render('design-your-service/index.html', {
     'steps': steps
   })
 })

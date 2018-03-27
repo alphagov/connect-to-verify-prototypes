@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+{% import "includes/macros.html" as macro %}
+
+{% block page_title %}
+  Example - Branching
+{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+	<div class="breadcrumbs">
+	  <ol>
+	    <li><a href="/">GOV.UK Verify</a></li>
+	    <li><a href="#">Check if you need proof of your users identity</a></li>
+	  </ol>
+	</div>
+	
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+        <h1 class="heading-xlarge">
+          Decide where verify fits into your service's user journey
+        </h1>
+				<p>
+					Depending on what the service provides and the needs of the user Verify should be placed at different positions to allow the user the most coherent and efficient journey through the service possible. Verify should keep the service secure, but also not act as a blocker for users performing certain tasks.
+				</p>
+				<h2 class="heading-large">1. Verify at the beginning of the service</h2>
+				<img src="{{asset_path}}/images/journeys/beginning.png" width="100%" />
+				<p>
+					In many instances Verify is best placed at the start of the service. If the entire service requires a Level of assurance 2 then the user should not be able to access the service before they have verified their identity to the required level. 
+				</p>
+				<h3 class="heading-medium">Benefits</h3>
+				<ul class="list list-bullet">
+					<li>
+						the user will be signed into the service so any progress can be saved and returned to without risk of losing it			
+					</li>
+					<li>
+						the user can get the more difficult verification part of the service out of the way first – If they can't be verified, they can use a different channel
+					</li>
+					<li>
+						some of the data provided to Verify in the verification process (name, date of birth and address) can be passed back to the service without the user needing to submit it a second time					
+					</li>					
+				</ul>
+				<h3 class="heading-medium">Issues</h3>
+				<ul class="list list-bullet">
+					<li>
+						if the user needs to wait to get the appropriate documentation to get verified, this can prevent them from completing any of the service until that point
+					</li>
+					<li>
+						not all users can be verified, so contingencies must be made to enable these users to still be able to complete the service in some form
+					</li>
+				</ul>
+				<h3 class="heading-medium">Examples</h3>
+				<ul class="list list-bullet">
+					<li>
+						<a href="https://www.gov.uk/help-friends-family-tax">Help friends or family with their tax</a> – Verify is the only online means of accessing the service, therefore the primary call to action links straight into the Verify hub. The offline option is placed just below this link so that users unable to access the service online can easily find that route from the start page.
+					</li>
+					<li>
+						<a href="https://www.gov.uk/check-state-pension">Check your state pension</a> – Users can use either Government Gateway or Verify to sign into the service. It is only when the user clicks on the ‘start now’ button that they are provided with a choice of which method to use to log in.
+					</li>
+				</ul>
+				<h2 class="heading-large">2. Verify later in the service</h2>
+				<img src="{{asset_path}}/images/journeys/later.png" width="100%" />
+				<p>
+					Some services, such as Universal Credit, have Verify placed in the middle of their service this can allow the user to use as much of your service as possible before they need to sign in. For example, most shopping cart sites let you browse without having to sign in first.
+				</p>
+				<h3 class="heading-medium">Benefits</h3>
+				<ul class="list list-bullet">
+					<li>
+						for longer services, this can allow users to better manage their time. They can complete certain parts of the service and have a certain element of choice as to when they complete the Verify part
+					</li>
+					<li>
+						if there are alternative means of users verifying their identity, such as face-to-face in a government office, Verify being in the middle allows users to complete a good part of the service before finishing the later stages offline or elsewhere
+					</li>				
+				</ul>
+				<h3 class="heading-medium">Issues</h3>
+				<ul class="list list-bullet">
+					<li>
+						users who may not be able to Verify won’t be able to complete all of their service. Services need to carefully manage expectation in these cases
+					</li>	
+				</ul>
+				<h3 class="heading-medium">Examples</h3>
+				<ul class="list list-bullet">
+					<li>
+						Universal Credit – Verify appears in the service as a task in the to-do list. This allows the user to complete a number of other tasks before needing to verify themselves
+						<img src="{{asset_path}}images/journeys/uc.png" width="100%"/>
+					</li>
+					<li>
+						<a href="http://driving-medical-condition.service.gov.uk/">Driving with a medical condition</a> – The user completes a series of questions to define whether or not they actually need to declare their medical condition. Only once the service has established that the user needs to act, will they be asked to prove their identity. This means users aren’t unnecessarily forced to verify at the start, only if they are required to continue within the service.
+					</li>
+					<li>
+						Vehicle Operator Licence Application – Verify used at the very end of the service, acting as a digital declaration
+					</li>
+				</ul>
+
+
+
+    </div>
+		<div class="column-one-third">
+			{{ macro.taskList(steps) }}
+		</div>
+  </div>
+</main>
+{% endblock %}
