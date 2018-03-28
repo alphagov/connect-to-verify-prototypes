@@ -1,4 +1,5 @@
 {% extends "connect-to-verify/layout.html" %}
+{% import "includes/macros.html" as macro %}
 
 {% block page_title %}
   Connect to Verify - Connect to a test environment
@@ -76,18 +77,9 @@
         {% endif %}
       </div>
     </div>
-   <div class="column-third">
-      <aside class="govuk-related-items" role="complementary">
-          <h2 class="heading-medium" id="subsection-title">Help and settings</h2>
-          <nav role="navigation" aria-labelledby="subsection-title">
-            <ul class="font-xsmall">
-              <li><a href="/connect-to-verify/logged-in-home">Switch service</a></li>
-              <li><a href="/connect-to-verify/not-implemented">Account settings</a></li>
-              <li><a href="/connect-to-verify/not-implemented">Contact Verify</a></li>
-            </ul>
-          </nav>
-        </aside>
-      </div>
+		 <div class="column-one-third">
+			 {{ macro.taskList(steps) }}
+		 </div>
   </div>
 </main>
 
